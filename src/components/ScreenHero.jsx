@@ -14,7 +14,7 @@ export function ScreenHero({ onCtaClick }) {
           className="w-full h-full object-cover filter sepia-[15%] brightness-[95%]"
         />
         {/* Soft radial vignette to focus the center journal card */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-ink/45" />
       </div>
 
       {/* Header (Top of story) */}
@@ -52,7 +52,7 @@ export function ScreenHero({ onCtaClick }) {
           Join Early Access
         </button>
         <span className="font-typewriter text-[9px] text-oat/80 tracking-wider">
-          Swipe down to read our record
+          Scroll down to read our record
         </span>
       </footer>
     </div>

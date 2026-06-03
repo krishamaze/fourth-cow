@@ -76,8 +76,8 @@ export function ScreenEarlyAccess() {
           {!submitted ? (
             <form onSubmit={handleSubmit} className="flex flex-col gap-journal-md">
               {/* Name Input */}
-              <div className="flex flex-col">
-                <label htmlFor="ledger-name" className="font-typewriter text-[10px] text-soil uppercase tracking-widest mb-1">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="ledger-name" className="font-typewriter text-[10px] text-soil uppercase tracking-widest font-bold">
                   Your Name
                 </label>
                 <input
@@ -90,13 +90,17 @@ export function ScreenEarlyAccess() {
                   }}
                   autoComplete="name"
                   placeholder="e.g. Samuel Parker"
-                  className="font-journal text-base bg-transparent border-b border-ink/20 focus:border-soil focus:outline-none pb-1 text-ink placeholder-ink/30 transition-all duration-200"
+                  className={`font-journal text-base bg-paper/30 border ${
+                    error === 'Please write your name' 
+                      ? 'border-rust focus:border-rust focus:ring-rust' 
+                      : 'border-ink/35 focus:border-soil focus:ring-soil'
+                  } rounded px-3 py-2 focus:ring-1 focus:outline-none text-ink placeholder-ink-muted transition-all duration-200`}
                 />
               </div>
 
               {/* Phone Input */}
-              <div className="flex flex-col">
-                <label htmlFor="ledger-phone" className="font-typewriter text-[10px] text-soil uppercase tracking-widest mb-1">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="ledger-phone" className="font-typewriter text-[10px] text-soil uppercase tracking-widest font-bold">
                   Phone Number
                 </label>
                 <input
@@ -109,7 +113,11 @@ export function ScreenEarlyAccess() {
                   }}
                   autoComplete="tel"
                   placeholder="e.g. 555-0199"
-                  className="font-typewriter text-sm bg-transparent border-b border-ink/20 focus:border-soil focus:outline-none pb-1 text-ink placeholder-ink/30 transition-all duration-200"
+                  className={`font-typewriter text-sm bg-paper/30 border ${
+                    error === 'Please write a valid 10-digit phone number' 
+                      ? 'border-rust focus:border-rust focus:ring-rust' 
+                      : 'border-ink/35 focus:border-soil focus:ring-soil'
+                  } rounded px-3 py-2 focus:ring-1 focus:outline-none text-ink placeholder-ink-muted transition-all duration-200`}
                 />
               </div>
 

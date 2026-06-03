@@ -18,9 +18,9 @@ This document outlines the architectural blueprint, data models, component layou
 
 ---
 
-## 2. Content Architecture
+## 2. Content Architecture & Interaction Rules
 
-The application is structured as a vertical, single-page Instagram-style Story interface optimized for mobile viewport snap-scrolling:
+The application is structured as a single-page long-form journal. All sections flow vertically and natively:
 
 ```mermaid
 graph TD
@@ -30,11 +30,10 @@ graph TD
     D --> E[Screen 5: The Ledger / Early Access Form]
 ```
 
-- **Screen 1 (Origin)**: Explains our baseline starting scale (four cows and the small family orchard).
-- **Screen 2 (Story)**: Details the personal relationship with our named cows and manual milking techniques.
-- **Screen 3 (Products)**: Presents the products alongside actual production limits.
-- **Screen 4 (Transparency)**: Hand-logged photos documenting our natural, chemical-free compost and orchard care.
-- **Screen 5 (Ledger)**: A clean form capturing name and phone number, stamp-recording entries directly into LocalStorage.
+### Critical Interaction Mandates (No Scroll Hijacking)
+1. **Standard Browser Physics**: Forcing snap-scroll, capturing manual touch/scroll gestures, or implementing slide-based progress timelines that auto-advance the page is strictly prohibited. Users must have total scrolling control.
+2. **Infinite Scannability**: The layout must allow seamless scanning and continuous scrolling. Users should be able to glide through the journal page or flick straight to the early access signup form.
+3. **Viewport Scale Safety**: All sections must render with flexible vertical height (using min-height constraints) so that content overflows naturally on smaller display heights rather than being truncated.
 
 ---
 
@@ -59,14 +58,13 @@ interface Product {
 ## 4. Component Hierarchy
 
 ```
-App.jsx (Main Orchestrator & State Container)
- ├── StoryViewport (Gesture, Keyboard & Snap Scroll Manager)
- └── StoryProgressIndicator (Visual Progress Bars)
-      ├── ScreenHero (Story Slide 01)
-      ├── ScreenStory (Story Slide 02)
-      ├── ScreenProducts (Story Slide 03)
-      ├── ScreenTransparency (Story Slide 04)
-      └── ScreenEarlyAccess (Story Slide 05 & Footer)
+App.jsx (Main Layout Container)
+ └── Column Viewport (Standard desktop flex-frame / mobile scroll-viewport)
+      ├── ScreenHero (Origin Section)
+      ├── ScreenStory (Story Section)
+      ├── ScreenProducts (Harvest Section)
+      ├── ScreenTransparency (Polaroid Log Section)
+      └── ScreenEarlyAccess (Ledger Section & Footer)
 ```
 
 ---
@@ -74,10 +72,11 @@ App.jsx (Main Orchestrator & State Container)
 ## 5. Mobile-first User Journey
 
 1. **Discovery**: User taps a link in an Instagram Story profile.
-2. **Landing**: Fits the mobile viewport (390px width) immediately, preventing browser page overflow.
-3. **Consumption**: User scroll-snaps or taps left/right through rich, visual journal pages.
-4. **Acquisition**: User reaches the final Ledger page, fills in their details, and receives a mock stamp receipt.
-5. **Storage**: Submissions are logged under local database records (`localstorage: fc_registrations`).
+2. **Landing**: Fits the mobile viewport width (390px) cleanly with zero horizontal overflow.
+3. **Consumption**: User scrolls vertically with standard browser scrolling inertia, scanning visual sections naturally.
+4. **Navigation**: User can tap CTA buttons (e.g., "Join Early Access") to trigger a smooth native anchor scroll directly to the signup ledger.
+5. **Acquisition**: User enters name/phone into the enclosed input boxes and registers.
+6. **Storage**: Registration stamps directly to LocalStorage (`fc_registrations`).
 
 ---
 

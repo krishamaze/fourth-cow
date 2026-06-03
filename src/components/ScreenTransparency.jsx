@@ -94,7 +94,7 @@ export function ScreenTransparency({ onCtaClick }) {
           Join Early Access
         </button>
         <span className="font-typewriter text-[9px] text-ink-muted tracking-wider">
-          Swipe down to sign our ledger
+          Scroll down to sign our ledger
         </span>
       </footer>
 

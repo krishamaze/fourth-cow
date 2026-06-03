@@ -91,7 +91,7 @@ export function ScreenProducts({ onCtaClick }) {
           Check Pre-booking
         </button>
         <span className="font-typewriter text-[9px] text-ink-muted tracking-wider">
-          Swipe down to see the practices
+          Scroll down to see the practices
         </span>
       </footer>
 
