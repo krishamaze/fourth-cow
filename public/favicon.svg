@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Round visual background with warm Oat Cream -->
+  <rect width="32" height="32" rx="6" fill="#FAF7F0"/>
+  <rect width="30" height="30" x="1" y="1" rx="5" fill="none" stroke="#2C3F2F" stroke-width="1.5"/>
+  
+  <!-- Stylized slab-serif monogram 'F' in Forest Green -->
+  <path d="M9 8h8v2h-6v4h5v2h-5v8H9V8z" fill="#2C3F2F"/>
+  
+  <!-- Stylized slab-serif monogram 'C' in Terracotta Soil -->
+  <path d="M23 10.5A4.5 4.5 0 0 0 19 9c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5c1.5 0 2.8-.8 3.5-1.8l1.5 1.2A6.5 6.5 0 0 1 19 20c-3.6 0-6.5-2.9-6.5-6.5S15.4 7 19 7c1.8 0 3.5.7 4.5 2l-1.5 1.5z" fill="#8A6242"/>
+</svg>
