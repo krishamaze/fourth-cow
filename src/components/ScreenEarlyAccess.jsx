@@ -15,9 +15,9 @@ export function ScreenEarlyAccess() {
       setError('Please write your name')
       return
     }
-    const cleanPhone = phone.replace(/\D/g, '')
-    if (!cleanPhone || !/^[6-9]\d{9}$/.test(cleanPhone)) {
-      setError('Please write a valid 10-digit mobile number')
+    const digits = phone.replace(/\D/g, '')
+    if (!digits || digits.length !== 10 || !/^[6-9]/.test(digits)) {
+      setError('Please enter a valid 10-digit Indian mobile number')
       return
     }
 
@@ -115,7 +115,7 @@ export function ScreenEarlyAccess() {
                   autoComplete="tel"
                   placeholder="e.g. 98765 43210"
                   className={`font-typewriter text-sm bg-paper/30 border ${
-                    error === 'Please write a valid 10-digit mobile number' 
+                    error === 'Please enter a valid 10-digit Indian mobile number' 
                       ? 'border-rust focus:border-rust focus:ring-rust' 
                       : 'border-ink/35 focus:border-soil focus:ring-soil'
                   } rounded px-3 py-2 focus:ring-1 focus:outline-none text-ink placeholder-ink-muted transition-all duration-200`}
@@ -140,7 +140,7 @@ export function ScreenEarlyAccess() {
             </form>
           ) : (
             /* Success confirmation card mimicking a ledger stamp receipt */
-            <div className="border border-dashed border-forest/40 bg-forest/5 p-journal-md flex flex-col gap-2 transition-journal">
+            <div className="border border-dashed border-forest/40 bg-forest/5 p-journal-md flex flex-col gap-2 animate-fade-in">
               <span className="font-typewriter text-[10px] text-forest font-bold tracking-wider uppercase">
                 * ENTRY RECORDED *
               </span>

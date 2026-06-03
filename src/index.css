@@ -66,7 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: var(--spacing-journal-xl) 0;
+  padding: 0; /* No vertical gap — frame fills viewport top-to-bottom */
   background-color: var(--color-forest);
   background-image: radial-gradient(rgba(250, 247, 240, 0.03) 1px, transparent 0);
   background-size: 32px 32px;
@@ -107,6 +107,10 @@
   padding: var(--spacing-journal-xl) var(--spacing-journal-lg);
   box-sizing: border-box;
   position: relative;
+  /* overflow: hidden intentionally removed — it was silently clipping content
+     on short viewports. Background images (absolute inset-0) are self-contained
+     within their relative parent and do not need overflow containment. */
+  overflow: visible;
 }
 
 /* Asymmetric notebook grid pattern */
@@ -120,3 +124,12 @@
   background-size: 20px 20px;
 }
 
+/* Fade-in for confirmation states */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
