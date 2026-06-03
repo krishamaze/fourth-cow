@@ -107,7 +107,6 @@
   padding: var(--spacing-journal-xl) var(--spacing-journal-lg);
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
 }
 
 /* Asymmetric notebook grid pattern */
@@ -121,12 +120,3 @@
   background-size: 20px 20px;
 }
 
-/* Keyframe animations for loading progress indicator */
-@keyframes progress-fill {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-.animate-progress {
-  animation: progress-fill 5s linear forwards;
-}
