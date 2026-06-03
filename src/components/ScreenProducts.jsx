@@ -23,7 +23,7 @@ export function ScreenProducts({ onCtaClick }) {
   ]
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-between p-journal-lg bg-oat bg-journal-grid">
+    <div className="relative w-full flex-1 min-h-0 flex flex-col justify-between p-journal-lg bg-oat bg-journal-grid">
       
       {/* Header */}
       <header className="w-full flex justify-between font-typewriter text-[11px] tracking-widest text-ink-muted uppercase">

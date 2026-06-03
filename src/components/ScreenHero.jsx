@@ -2,7 +2,7 @@ import cowsOrchardImg from '../assets/cows_orchard.png'
 
 export function ScreenHero({ onCtaClick }) {
   return (
-    <div className="relative w-full h-full flex flex-col justify-between p-journal-lg bg-oat overflow-hidden">
+    <div className="relative w-full flex-1 min-h-0 flex flex-col justify-between p-journal-lg bg-oat overflow-hidden">
       {/* 
         Background Visual: Orchard and Cows.
         Full-bleed with a soft overlay to create depth.

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
 @import "tailwindcss";
 
 @theme {
@@ -80,6 +78,7 @@
   background-color: var(--color-oat);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   border-radius: 8px; /* paper edge card feel */
+  overflow: hidden; /* clip children to rounded corners and prevent bleed */
   display: flex;
   flex-direction: column;
 }
@@ -99,18 +98,15 @@
 /* Story Screen Section */
 .story-screen {
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: stretch;
   padding: var(--spacing-journal-xl) var(--spacing-journal-lg);
   box-sizing: border-box;
   position: relative;
-  /* overflow: hidden intentionally removed — it was silently clipping content
-     on short viewports. Background images (absolute inset-0) are self-contained
-     within their relative parent and do not need overflow containment. */
-  overflow: visible;
+  overflow: clip; /* clips GPU paint tiles correctly without scroll interference */
 }
 
 /* Asymmetric notebook grid pattern */

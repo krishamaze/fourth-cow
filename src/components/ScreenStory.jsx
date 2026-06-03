@@ -2,7 +2,7 @@ import milkPouringImg from '../assets/milk_pouring.png'
 
 export function ScreenStory({ onCtaClick }) {
   return (
-    <div className="relative w-full h-full flex flex-col justify-between p-journal-lg bg-oat overflow-hidden">
+    <div className="relative w-full flex-1 min-h-0 flex flex-col justify-between p-journal-lg bg-oat overflow-hidden">
       {/* 
         Background Visual: Close-up pouring.
         Full-bleed with a warm film color filter.
