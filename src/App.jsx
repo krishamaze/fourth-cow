@@ -19,19 +19,19 @@ function App() {
         <section className="story-screen p-0! w-full">
           <ScreenHero onCtaClick={scrollToEarlyAccess} />
         </section>
-        
+
         <section className="story-screen p-0! w-full">
           <ScreenStory onCtaClick={scrollToEarlyAccess} />
         </section>
-        
+
         <section className="story-screen p-0! w-full">
           <ScreenProducts onCtaClick={scrollToEarlyAccess} />
         </section>
-        
+
         <section className="story-screen p-0! w-full">
           <ScreenTransparency onCtaClick={scrollToEarlyAccess} />
         </section>
-        
+
         <section id="early-access-section" className="story-screen p-0! w-full">
           <ScreenEarlyAccess />
         </section>

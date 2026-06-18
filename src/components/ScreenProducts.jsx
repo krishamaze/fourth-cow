@@ -1,4 +1,3 @@
-
 export function ScreenProducts({ onCtaClick }) {
   // Reusable structured content list with real limits and constraints
   const products = [
@@ -6,25 +5,18 @@ export function ScreenProducts({ onCtaClick }) {
       id: 'milk',
       title: 'Fresh Farm Milk',
       limit: '42 liters daily capacity',
-      details: [
-        'Milked by hand every morning',
-        'Glass bottle subscription starting Winter'
-      ]
+      details: ['Milked by hand every morning', 'Glass bottle subscription starting Winter'],
     },
     {
       id: 'mangoes',
       title: 'Mango Harvest 2026',
       limit: '120 trees in orchard',
-      details: [
-        'Naturally ripened on branches',
-        'Direct seasonal release in May'
-      ]
-    }
+      details: ['Naturally ripened on branches', 'Direct seasonal release in May'],
+    },
   ]
 
   return (
     <div className="relative w-full flex-1 min-h-0 flex flex-col justify-between p-journal-lg bg-oat bg-journal-grid">
-      
       {/* Header */}
       <header className="w-full flex justify-between font-typewriter text-[11px] tracking-widest text-ink-muted uppercase">
         <span>FOURTH COW</span>
@@ -33,7 +25,6 @@ export function ScreenProducts({ onCtaClick }) {
 
       {/* Main Content Area */}
       <main className="my-auto w-full flex flex-col gap-journal-lg">
-        
         {/* Section Heading */}
         <div className="text-left">
           <div className="font-typewriter text-[10px] text-soil tracking-widest uppercase mb-journal-xs">
@@ -46,15 +37,12 @@ export function ScreenProducts({ onCtaClick }) {
 
         {/* Asymmetrical products display (non-grid layout) */}
         <div className="flex flex-col gap-journal-md relative">
-          
           {/* Card 1: Milk (asymmetrical left-aligned) */}
           <div className="w-[85%] bg-oat border border-ink/10 p-journal-md shadow-sm transform -rotate-1 self-start transition-journal hover:rotate-0">
             <span className="font-typewriter text-[9px] text-soil font-bold block mb-journal-xs">
               {products[0].limit.toUpperCase()}
             </span>
-            <h3 className="font-journal text-xl font-medium text-ink mb-2">
-              {products[0].title}
-            </h3>
+            <h3 className="font-journal text-xl font-medium text-ink mb-2">{products[0].title}</h3>
             <ul className="font-journal text-[13px] text-ink-muted leading-relaxed list-disc pl-4">
               {products[0].details.map((detail, idx) => (
                 <li key={idx}>{detail}</li>
@@ -67,16 +55,13 @@ export function ScreenProducts({ onCtaClick }) {
             <span className="font-typewriter text-[9px] text-soil font-bold block mb-journal-xs">
               {products[1].limit.toUpperCase()}
             </span>
-            <h3 className="font-journal text-xl font-medium text-ink mb-2">
-              {products[1].title}
-            </h3>
+            <h3 className="font-journal text-xl font-medium text-ink mb-2">{products[1].title}</h3>
             <ul className="font-journal text-[13px] text-ink-muted leading-relaxed list-disc pl-4">
               {products[1].details.map((detail, idx) => (
                 <li key={idx}>{detail}</li>
               ))}
             </ul>
           </div>
-
         </div>
       </main>
 
@@ -94,7 +79,6 @@ export function ScreenProducts({ onCtaClick }) {
           Scroll down to see the practices
         </span>
       </footer>
-
     </div>
   )
 }

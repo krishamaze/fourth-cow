@@ -10,7 +10,7 @@ export function ScreenTransparency({ onCtaClick }) {
       desc: 'Milked by hand. No machines, no push. Just Lakshmi, Ganga, Yamuna, and Saraswati.',
       img: lakshmiImg,
       align: 'self-start',
-      rotate: '-rotate-1'
+      rotate: '-rotate-1',
     },
     {
       id: 'orchard',
@@ -18,7 +18,7 @@ export function ScreenTransparency({ onCtaClick }) {
       desc: '120 Alphonso and Kent mango trees. Ripened naturally on branches, not in warehouse boxes.',
       img: orchardImg,
       align: 'self-end',
-      rotate: 'rotate-1'
+      rotate: 'rotate-1',
     },
     {
       id: 'practices',
@@ -26,13 +26,12 @@ export function ScreenTransparency({ onCtaClick }) {
       desc: 'Composting using dry orchard leaves and cow manure. No tractors, no chemical fertilizers.',
       img: practicesImg,
       align: 'self-start',
-      rotate: '-rotate-1'
-    }
+      rotate: '-rotate-1',
+    },
   ]
 
   return (
     <div className="relative w-full flex-1 min-h-0 flex flex-col justify-between p-journal-lg bg-oat bg-notebook-dot">
-      
       {/* Header */}
       <header className="w-full flex justify-between font-typewriter text-[11px] tracking-widest text-ink-muted uppercase">
         <span>FOURTH COW</span>
@@ -41,7 +40,6 @@ export function ScreenTransparency({ onCtaClick }) {
 
       {/* Main content: Polaroid log */}
       <main className="my-auto w-full flex flex-col gap-journal-md">
-        
         {/* Section Title */}
         <div className="text-left">
           <div className="font-typewriter text-[10px] text-soil tracking-widest uppercase mb-journal-xs">
@@ -80,7 +78,6 @@ export function ScreenTransparency({ onCtaClick }) {
             </div>
           ))}
         </div>
-
       </main>
 
       {/* Footer / Nav */}
@@ -97,7 +94,6 @@ export function ScreenTransparency({ onCtaClick }) {
           Scroll down to sign our ledger
         </span>
       </footer>
-
     </div>
   )
 }

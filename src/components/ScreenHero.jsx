@@ -30,13 +30,14 @@ export function ScreenHero({ onCtaClick }) {
           <div className="font-typewriter text-[10px] text-soil tracking-widest uppercase mb-journal-xs">
             [ 01 // ORIGIN ]
           </div>
-          
+
           <h1 className="font-journal text-3xl font-medium tracking-tight text-ink leading-tight mb-journal-sm">
             We have four cows.
           </h1>
-          
+
           <p className="font-journal text-base text-ink-muted leading-relaxed">
-            And a small family mango orchard. We bottle what they give us each morning, direct from our pasture.
+            And a small family mango orchard. We bottle what they give us each morning, direct from
+            our pasture.
           </p>
         </div>
       </main>

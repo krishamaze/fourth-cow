@@ -29,13 +29,14 @@ export function ScreenStory({ onCtaClick }) {
           <div className="font-typewriter text-[10px] text-soil tracking-widest uppercase mb-journal-xs">
             [ 02 // THE DAILY RECORD ]
           </div>
-          
+
           <h2 className="font-journal text-2xl font-medium tracking-tight text-ink leading-tight mb-journal-xs">
             Ganga, Yamuna, Saraswati, and Lakshmi.
           </h2>
-          
+
           <p className="font-journal text-base text-ink-muted leading-relaxed">
-            They graze on sweet pasture grass. We do not use milking machines. We milk by hand, filter twice, and pour it into glass bottles under the mango trees.
+            They graze on sweet pasture grass. We do not use milking machines. We milk by hand,
+            filter twice, and pour it into glass bottles under the mango trees.
           </p>
         </div>
       </main>

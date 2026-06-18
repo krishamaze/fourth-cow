@@ -1,21 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Brand Personality: Tactile, organic, raw, and sincere. */
   /* Colors are themed around the soil, vegetation, paper ledger, and ink of a family farm. */
-  --color-oat: #FAF7F0;           /* Primary warm cream background (ledger paper) */
-  --color-paper: #F2EBDC;         /* Contrast background for cards/sections */
-  --color-ink: #242622;           /* Text body - charcoal green */
-  --color-ink-muted: #575C53;     /* Text secondary - faded charcoal */
-  --color-forest: #2C3F2F;        /* Primary brand color - dark rich moss green */
-  --color-forest-light: #4A5F4E;  /* Hover or lighter shade of forest */
-  --color-soil: #8A6242;          /* Secondary brand color - warm terracotta brown */
-  --color-hay: #DFBA73;           /* Highlight brand color - straw yellow */
-  --color-rust: #9B3B3B;          /* Muted error/alert - clay red */
+  --color-oat: #faf7f0; /* Primary warm cream background (ledger paper) */
+  --color-paper: #f2ebdc; /* Contrast background for cards/sections */
+  --color-ink: #242622; /* Text body - charcoal green */
+  --color-ink-muted: #575c53; /* Text secondary - faded charcoal */
+  --color-forest: #2c3f2f; /* Primary brand color - dark rich moss green */
+  --color-forest-light: #4a5f4e; /* Hover or lighter shade of forest */
+  --color-soil: #8a6242; /* Secondary brand color - warm terracotta brown */
+  --color-hay: #dfba73; /* Highlight brand color - straw yellow */
+  --color-rust: #9b3b3b; /* Muted error/alert - clay red */
 
   /* Typography System */
-  --font-journal: "EB Garamond", Georgia, serif;
-  --font-typewriter: "Courier Prime", Courier, monospace;
+  --font-journal: 'EB Garamond', Georgia, serif;
+  --font-typewriter: 'Courier Prime', Courier, monospace;
 
   /* Responsive Spacing Scale (no arbitrary layouts) */
   --spacing-journal-xs: 0.5rem;
@@ -122,8 +122,14 @@
 
 /* Fade-in for confirmation states */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
